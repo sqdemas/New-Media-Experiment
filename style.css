@@ -1,0 +1,233 @@
+/* Select readable font and text/background colors with good contrast. To search for different Google Fonts, go to https://www.w3schools.com/howto/howto_google_fonts.asp */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Oswald', 'sans-serif';
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    background-color: rgb(252, 246, 225);
+  }  
+
+.collage-container {
+  position: relative;
+  width: 75%;
+  max-width: 100%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.background {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer; /* visual cue that background is clickable */
+}
+
+.overlay-img {
+  position: absolute;
+  width: 20%; /* Adjust as needed */
+  cursor: pointer;
+  z-index: 2;
+  transition: opacity 0.2s;
+}
+
+.overlay-img[src="grass.png"],
+.overlay-img[src="mountain.png"] {
+  width: 90%;  /* Set your desired width */
+  height: auto;
+}
+
+.overlay-img[src="plane.PNG"],
+.overlay-img[src="cottage.PNG"] {
+  width: 40%;  /* Set your desired width */
+  height: auto;
+}
+.overlay-img[src="cloud.png"],
+.overlay-img[src="mushroom.png"],
+.overlay-img[src="shark.PNG"],
+.overlay-img[src="tree.png"] {
+  width: 30%;  /* Set your desired width */
+  height: auto;
+}
+
+.overlay-img[src="sand.png"] {
+  width: 110%;  /* Set your desired width */
+  height: auto;
+}
+
+.overlay-img[src="car.png"],
+.overlay-img[src="flowerPot.png"] {
+  width: 33%;
+  height: auto;
+}
+
+.overlay-img[src="hand.png"] {
+  width: 25%;  /* Set your desired width */
+  height: auto;
+}
+
+.overlay-img[src="clock.png"] {
+  width: 13%;
+  height: auto;
+}
+
+.overlay-img[src="polaroid.PNG"],
+.overlay-img[src="pinwheel.GIF"] {
+  width: 20%;  /* Set your desired width */
+  height: auto;
+}
+
+.hero-image {
+/* This selector controls the "hero image" class. You may need to change "hero.jpg" name/format to match your asset, or vice-versa */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("hero.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+/* This selector places text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+/* The next two selectors control hero-text font properties. 2em is 2x inherited font-size value. 5 em is 5x stated value. */
+.hero-text h1 {
+    font-family: inherit;
+    font-size: 5em;
+    color: white;
+  }
+
+.hero-text h2 {
+    font-family: inherit;
+    font-size: 2em;
+    color: white;
+  }
+  
+
+ /* The text-block class selector controls the text-box on screens >800px. You will also need to adjust values in the next text-box selector. */
+.text-block {
+    display: block;
+    width: 65%;
+    background-color: inherit;
+    padding: 0px;
+    border: 0px solid rgb(0, 0, 0);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: inherit;
+    font-size: 1.5em;
+    color: inherit;
+  }
+
+ /* This code helps your text-block scale for screens ≤800px. */
+  @media screen and (max-width: 800px) {
+    .text-block {  
+        display: block;
+        width: 90%;
+        background-color: inherit;
+        padding: 0px;
+        border: 0px solid black;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: inherit;
+        font-size: 1.25em;
+        color: inherit;
+    }
+  }
+
+
+
+/*  - Image Container with Text Box -
+Add text to your image and control text-box location*/
+.image-container {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin-top: 100px;
+  margin-bottom:100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-container img {
+  width: 100%;   /* Keep 100%. Add Filters.*/
+}
+
+.image-container-text {
+  position: absolute;
+  /*Using max-with property with pixels will prevent a left aligned box from over-scrolling*/
+  max-width: 300px;
+  /*Change location right/left and top/bottom. To center use top 50% left 50% */
+  bottom: 20px;
+  right: 20px;
+  /*Using rgba (red,blue,green, alpha) allows us to control color and opacity. For a white tinted text box, use 255, 255, 255, .3 */
+  background-color: rgba(0, 0, 0, .3);
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/*  - Caption -
+Style caption left, center, justify, right. */
+.caption {
+    display: block;
+    padding: none;
+    border: none;
+    margin: none;
+    text-align: center;
+  }
+
+
+/*  - Logo -
+Logo width controlled inline */
+.logo {
+    display: block;
+    padding: 10px;
+    border: 0px solid black;
+    margin-top: 200px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    font: inherit;
+    font-size: 12pt;
+    text-align: center;
+  }
+
+
+/*  - Footer -
+Add a Copyright */
+.footer {
+    border: none;
+    padding: 10px;
+    margin: auto;
+    font: inherit;
+    font-size: inherit;
+    text-align: center;    
+  }
+
+a {
+  color: #2c6297;      /* Replace with your desired color */
+  text-decoration: underline; /* Optional: keeps underline */
+}
+
+a:hover, a:focus {
+  color: #4a749e;      /* Color when hovered or focused */
+  text-decoration: underline; /* Optional: underline on hover */
+}
