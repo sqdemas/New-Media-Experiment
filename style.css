@@ -42,8 +42,8 @@ body, html {
   height: auto;
 }
 
-.overlay-img[src="plane.PNG"],
-.overlay-img[src="cottage.PNG"] {
+.overlay-img[src="plane.png"],
+.overlay-img[src="cottage.png"] {
   width: 40%;  /* Set your desired width */
   height: auto;
 }
